@@ -1,0 +1,5 @@
+Elwoood C. Downey          - Original INDI specification & architecture, indiserver, eventool, little XML parser, 
+			     common astronomical routines and basic dada types
+Jasem Mutlaq               - implementation of the standard INDI repository, refactoring of common 
+			     astronomical routines into one file. Most drivers of the INDI repository.
+Rafael Gonzalez Fuentetaja - Author of the current INDI SDK and plugins, adapted to an particular architecture (COR)

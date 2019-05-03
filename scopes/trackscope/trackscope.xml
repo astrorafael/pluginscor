@@ -1,0 +1,67 @@
+
+<!--  Device TrackScope  -->
+
+<defDevice name='TrackScope'>
+
+<!--  Device TrackScope, Property EDB  -->
+
+	<defTextVector device='TrackScope' name='EDB' state='Ok' label='Objeto observado' group='Posicion' perm='rw'>
+		<defText name='LINE' label='Datos .edb'>
+			M82,f|G|Sd, 9:55:54.0, 69:40:59,8.60,2000,672|258.259|64.9412
+		</defText>
+	</defTextVector>
+
+<!--  Device TrackScope, Property EQUATORIAL_COORD  -->
+
+	<defNumberVector device='TrackScope' name='EQUATORIAL_COORD' state='Ok' label='Coord. Ecuatoriales J2000' group='Posicion' perm='rw'>
+			<defNumber name='DEC' label='DEC [D:M:S]' format='%10.6m' min='-90' max='90' step='0'>
+				69.6831
+			</defNumber>
+			<defNumber name='RA' label='AR  [H:M:S]' format='%10.6m' min='0' max='24' step='0'>
+				9.93167
+			</defNumber>
+	</defNumberVector>
+
+<!--  Device TrackScope, Property FITS_TEXT_DATA  -->
+
+	<defTextVector device='TrackScope' name='FITS_TEXT_DATA' state='Ok' label='Datos FITS' group='Datos FITS adicionales' perm='rw'>
+		<defText name='LOCATION' label='Emplazamiento'>
+			Bonilla, Cuenca
+		</defText>
+		<defText name='OBSERVER' label='Observador(es)'>
+			Rafael Gonzalez Fuentetaja
+		</defText>
+		<defText name='TELESCOP' label='Telescopio'>
+			LX200GPS 10 inch
+		</defText>
+	</defTextVector>
+
+<!--  Device TrackScope, Property OBJECT  -->
+
+	<defTextVector device='TrackScope' name='OBJECT' state='Ok' label='Objeto observado' group='Posicion' perm='rw'>
+		<defText name='NAME' label='Denominacion'>
+			M82
+		</defText>
+	</defTextVector>
+
+<!--  Device TrackScope, Property OPTICS  -->
+
+	<defNumberVector device='TrackScope' name='OPTICS' state='Ok' label='Optica' group='Datos FITS adicionales' perm='rw'>
+			<defNumber name='DIAMETER' label='Diametro  [cm]' format='%g' min='0' max='200' step='1'>
+				25.4
+			</defNumber>
+			<defNumber name='FOCALLEN' label='Focal ef. [cm]' format='%g' min='0' max='10000' step='1'>
+				254
+			</defNumber>
+	</defNumberVector>
+
+<!--  Device TrackScope, Property CONFIGURATION  -->
+
+	<defSwitchVector device='TrackScope' name='CONFIGURATION' state='Ok' label='Configuracion' perm='rw' rule='AtMostOne'>
+		<defSwitch name='SAVE' label='Guardar'>
+			Off
+		</defSwitch>
+	</defSwitchVector>
+
+</defDevice>
+

@@ -1,0 +1,56 @@
+
+<!--  Device METEO  -->
+
+<defDevice name='METEO'>
+
+<!--  Device METEO, Property CONFIGURATION  -->
+
+	<defSwitchVector device='METEO' name='CONFIGURATION' state='Idle' label='Configuracion' perm='rw' rule='AtMostOne'>
+		<defSwitch name='SAVE' label='Guardar'>
+			Off
+		</defSwitch>
+	</defSwitchVector>
+
+<!--  Device METEO, Property TEMPERATURE  -->
+
+	<defNumberVector device='METEO' name='TEMPERATURE' state='Idle' label='Temperatura' perm='ro'>
+			<defNumber name='AMB_TEMP' label='Temperatura Ambiente [C]' format='%3.0f' min='0' max='0' step='0'>
+				25
+			</defNumber>
+			<defNumber name='DEW_POINT' label='Punto de rocio [C]' format='%3.0f' min='0' max='0' step='0'>
+				10
+			</defNumber>
+			<defNumber name='REL_HIGRO' label='Humedad relativa [%]' format='%2.0f' min='0' max='0' step='0'>
+				30
+			</defNumber>
+	</defNumberVector>
+
+<!--  Device METEO, Property WEA_SENSORS  -->
+
+	<defLightVector device='METEO' name='WEA_SENSORS' state='Idle' label='Alarmas meteorologicas'>
+		<defLight name='CLOUD_SENSOR' label='Sensor de nubes'>
+			Idle
+		</defLight>
+		<defLight name='RAIN_SENSOR' label='Sensor de lluvia'>
+			Idle
+		</defLight>
+	</defLightVector>
+
+<!--  Device METEO, Property WIND_DIR  -->
+
+	<defTextVector device='METEO' name='WIND_DIR' state='Idle' label='Direccion del viento' perm='ro'>
+		<defText name='DIR' label='Direccion del viento'>
+			N
+		</defText>
+	</defTextVector>
+
+<!--  Device METEO, Property WIND_SPEED  -->
+
+	<defNumberVector device='METEO' name='WIND_SPEED' state='Idle' label='Velocidad del viento'  perm='ro'>
+			<defNumber name='SPEED' label='Velocidad del Viento [ADUs]' format='%5.0f' min='0' max='0' step='0'>
+				0
+			</defNumber>
+	</defNumberVector>
+
+</defDevice>
+

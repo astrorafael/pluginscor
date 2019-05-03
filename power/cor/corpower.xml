@@ -1,0 +1,172 @@
+
+<!--  Device CORPOWER  -->
+
+<defDevice name='CORPOWER'>
+
+<!--  Device CORPOWER, Property ACTUATORS_ARM  -->
+
+	<defSwitchVector device='CORPOWER' name='ACTUATORS_ARM' state='Idle' label='Armar Reles' perm='rw' rule='AnyOfMany'>
+		<defSwitch name='OUTPUT1' label='Aux'>
+			Off
+		</defSwitch>
+		<defSwitch name='OUTPUT2' label='CCD'>
+			Off
+		</defSwitch>
+		<defSwitch name='OUTPUT3' label='Cupula'>
+			Off
+		</defSwitch>
+		<defSwitch name='OUTPUT4' label='Luz Flats'>
+			Off
+		</defSwitch>
+		<defSwitch name='OUTPUT5' label='Calentador'>
+			Off
+		</defSwitch>
+		<defSwitch name='OUTPUT6' label='Meteo'>
+			Off
+		</defSwitch>
+		<defSwitch name='OUTPUT7' label='PC'>
+			Off
+		</defSwitch>
+		<defSwitch name='OUTPUT8' label='Telescopio'>
+			Off
+		</defSwitch>
+	</defSwitchVector>
+
+<!--  Device CORPOWER, Property ACTUATORS_STATUS  -->
+
+	<defLightVector device='CORPOWER' name='ACTUATORS_STATUS' state='Idle' label='Estado Potencia' >
+		<defLight name='OUTPUT1' label='Aux'>
+			Ok
+		</defLight>
+		<defLight name='OUTPUT2' label='CCD'>
+			Ok
+		</defLight>
+		<defLight name='OUTPUT3' label='Cupula'>
+			Ok
+		</defLight>
+		<defLight name='OUTPUT4' label='Luz Flats'>
+			Ok
+		</defLight>
+		<defLight name='OUTPUT5' label='Calentador'>
+			Ok
+		</defLight>
+		<defLight name='OUTPUT6' label='Meteo'>
+			Ok
+		</defLight>
+		<defLight name='OUTPUT7' label='PC'>
+			Ok
+		</defLight>
+		<defLight name='OUTPUT8' label='Telescopio'>
+			Ok
+		</defLight>
+	</defLightVector>
+
+<!--  Device CORPOWER, Property ACTUATORS_TRG  -->
+
+	<defSwitchVector device='CORPOWER' name='ACTUATORS_TRG' state='Idle' label='Disparar Reles' perm='rw' rule='AtMostOne'>
+		<defSwitch name='CANCEL' label='Cancelar'>
+			Off
+		</defSwitch>
+		<defSwitch name='SWITCH_OFF' label='Apagar'>
+			Off
+		</defSwitch>
+		<defSwitch name='SWITCH_ON' label='Encender'>
+			Off
+		</defSwitch>
+	</defSwitchVector>
+
+
+<!--  Device CORPOWER, Property INPUTS_G1  -->
+
+	<defLightVector device='CORPOWER' name='INPUTS_G1' state='Idle'>
+		<defLight name='INPUT1' label='Entrada  1'>
+			Ok
+		</defLight>
+		<defLight name='INPUT2' label='Entrada  2'>
+			Alert
+		</defLight>
+		<defLight name='INPUT3' label='Entrada  3'>
+			Alert
+		</defLight>
+		<defLight name='INPUT4' label='Entrada  4'>
+			Alert
+		</defLight>
+		<defLight name='INPUT5' label='Entrada  5'>
+			Ok
+		</defLight>
+		<defLight name='INPUT6' label='Entrada  6'>
+			Ok
+		</defLight>
+	</defLightVector>
+
+<!--  Device CORPOWER, Property INPUTS_G2  -->
+
+	<defLightVector device='CORPOWER' name='INPUTS_G2' state='Idle'>
+		<defLight name='INPUT1' label='Entrada  7'>
+			Ok
+		</defLight>
+		<defLight name='INPUT2' label='Entrada  8'>
+			Alert
+		</defLight>
+		<defLight name='INPUT3' label='Entrada  9'>
+			Alert
+		</defLight>
+		<defLight name='INPUT4' label='Entrada 10'>
+			Alert
+		</defLight>
+		<defLight name='INPUT5' label='Entrada 11'>
+			Ok
+		</defLight>
+		<defLight name='INPUT6' label='Entrada 12'>
+			Ok
+		</defLight>
+	</defLightVector>
+
+<!--  Device CORPOWER, Property INPUTS_G3  -->
+
+	<defLightVector device='CORPOWER' name='INPUTS_G3' state='Idle'>
+		<defLight name='INPUT1' label='Entrada 13'>
+			Ok
+		</defLight>
+		<defLight name='INPUT2' label='Entrada 14'>
+			Alert
+		</defLight>
+		<defLight name='INPUT3' label='Entrada 15'>
+			Alert
+		</defLight>
+		<defLight name='INPUT4' label='Entrada 16'>
+			Alert
+		</defLight>
+		<defLight name='INPUT5' label='Entrada 17'>
+			Ok
+		</defLight>
+		<defLight name='INPUT6' label='Entrada 18'>
+			Ok
+		</defLight>
+	</defLightVector>
+
+<!--  Device CORPOWER, Property INPUTS_G4  -->
+
+	<defLightVector device='CORPOWER' name='INPUTS_G4' state='Idle'>
+		<defLight name='INPUT1' label='Entrada 19'>
+			Ok
+		</defLight>
+		<defLight name='INPUT2' label='Entrada 20'>
+			Alert
+		</defLight>
+		<defLight name='INPUT3' label='Entrada 21'>
+			Alert
+		</defLight>
+		<defLight name='INPUT4' label='Entrada 22'>
+			Alert
+		</defLight>
+		<defLight name='INPUT5' label='Entrada 23'>
+			Ok
+		</defLight>
+		<defLight name='INPUT6' label='Entrada 24'>
+			Ok
+		</defLight>
+	</defLightVector>
+
+</defDevice>
+

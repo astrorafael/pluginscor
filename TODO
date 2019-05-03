@@ -1,0 +1,36 @@
+PLUGINS
+=======
+
+* Installation doc
+
+* Todos: hay mucho trafico XML innecesario. Revisar cuidadosamente cuando 
+se comunican properties a los clientes. Hay duplicados y actualizaciones innecesarias.
+
+* Audine: Review BLOB handling
+* Audine: Image local and optionally remote
+* Audine: BLOB property with sequencer data.
+* Audine: Review "notification from other devices" code
+* Audine: Temperature control.
+* Audine: No usar un PluginTimer local. Utilizar el hubTimer. 
+Para ello hay que registrarse y desregistrarse en lugra de decir 
+stop() y start()
+
+
+* COR: Review "notification from other devices" code
+* COR: Modify protocol to exclude power in "keepalive message" !!!!
+
+
+* LX200simple: SLewRate, FindRate, CenterRate 
+y TrackingRate, 
+*  LX200simple: implementar los comandos de movimiento arriba, abajo, izda, dcha y sus aborts corrrespondientes.
+* LX200: Revision de nombres de property vectors. En lugar de verbos, 
+deben ser nombres
+* LX200: Añadir switchVector SERIAL_PORT(CONNECT,DISCONNECT) ??
+
+* Power Control: Tratar el caso de los eventos desde el COR con estado
+OK, como lo emite tan frecuentemente, siempre esta enviado eventos
+y me borra los actuadores !!!
+
+
+
+

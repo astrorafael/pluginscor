@@ -1,0 +1,359 @@
+
+<!--  Device AUDINE1  -->
+
+<defDevice name='AUDINE1'>
+
+<!--  Device AUDINE1, Property ADC_SPEED  -->
+
+	<defSwitchVector device='AUDINE1' name='ADC_SPEED' state='Ok' label='Convertidor A/D' group='Ajustes avanzados' perm='rw' rule='AtMostOne'>
+		<defSwitch name='100KBS' label='100 Kbit/s'>
+			On
+		</defSwitch>
+		<defSwitch name='200KBS' label='200 Kbit/s'>
+			Off
+		</defSwitch>
+	</defSwitchVector>
+
+<!--  Device AUDINE1, Property AREA_DIM  -->
+
+	<defNumberVector device='AUDINE1' name='AREA_DIM' state='Ok' label='Dimensiones maximas' group='Geometria' perm='ro'>
+			<defNumber name='DIMX' label='anchura [pixels]' format='%g' min='0' max='0' step='0'>
+				398
+			</defNumber>
+			<defNumber name='DIMY' label='altura  [pixels]' format='%g' min='0' max='0' step='0'>
+				260
+			</defNumber>
+			<defNumber name='PIXSZ' label='Medidas pixel equivalente [um]' format='%g' min='0' max='0' step='0'>
+				18
+			</defNumber>
+	</defNumberVector>
+
+<!--  Device AUDINE1, Property AREA_DIM_RECT  -->
+
+	<defNumberVector device='AUDINE1' name='AREA_DIM_RECT' state='Idle' label='Definicion del rectangulo' group='Geometria' perm='rw'>
+			<defNumber name='DIMX' label='anchura [pixels]' format='%g' min='1' max='398' step='1'>
+				398
+			</defNumber>
+			<defNumber name='DIMY' label='altura  [pixels]' format='%g' min='1' max='260' step='1'>
+				260
+			</defNumber>
+			<defNumber name='ORIGX' label='Coord X origen' format='%g' min='0' max='3000' step='1'>
+				0
+			</defNumber>
+			<defNumber name='ORIGY' label='Coord Y origen' format='%g' min='0' max='3000' step='1'>
+				0
+			</defNumber>
+	</defNumberVector>
+
+<!--  Device AUDINE1, Property AREA_PRESETS  -->
+
+	<defSwitchVector device='AUDINE1' name='AREA_PRESETS' state='Idle' label='Presets rapidos' group='Geometria' perm='rw' rule='OneOfMany'>
+		<defSwitch name='CENTER' label='Centro'>
+			Off
+		</defSwitch>
+		<defSwitch name='CORNER1' label='Esquina 1'>
+			On
+		</defSwitch>
+		<defSwitch name='CORNER2' label='Esquina 2'>
+			Off
+		</defSwitch>
+		<defSwitch name='CORNER3' label='Esquina 3'>
+			Off
+		</defSwitch>
+		<defSwitch name='CORNER4' label='Esquina 4'>
+			Off
+		</defSwitch>
+	</defSwitchVector>
+
+<!--  Device AUDINE1, Property AREA_PRESET_SIZE  -->
+
+	<defNumberVector device='AUDINE1' name='AREA_PRESET_SIZE' state='Idle' label='Area del preset' group='Geometria' perm='rw'>
+			<defNumber name='SIZE' label='anchura [pixels]' format='%g' min='5' max='100' step='5'>
+				20
+			</defNumber>
+	</defNumberVector>
+
+<!--  Device AUDINE1, Property AREA_SELECTION  -->
+
+	<defSwitchVector device='AUDINE1' name='AREA_SELECTION' state='Ok' label='Seleccion del area a adquirir' group='Geometria' perm='rw' rule='OneOfMany'>
+		<defSwitch name='FULL_FRAME' label='Todo'>
+			Off
+		</defSwitch>
+		<defSwitch name='FULL_FRAME_OV' label='Todo + Overscan'>
+			On
+		</defSwitch>
+		<defSwitch name='PRESETS' label='Presets rapidos'>
+			Off
+		</defSwitch>
+		<defSwitch name='USER_DEFINED' label='Definible por usuario'>
+			Off
+		</defSwitch>
+	</defSwitchVector>
+
+<!--  Device AUDINE1, Property BINNING  -->
+
+	<defSwitchVector device='AUDINE1' name='BINNING' state='Ok' label='Binning' group='Geometria' perm='rw' rule='OneOfMany'>
+		<defSwitch name='1X1' label='1x1'>
+			Off
+		</defSwitch>
+		<defSwitch name='2X2' label='2x2'>
+			On
+		</defSwitch>
+		<defSwitch name='3X3' label='3x3'>
+			Off
+		</defSwitch>
+		<defSwitch name='4X4' label='4x4'>
+			Off
+		</defSwitch>
+	</defSwitchVector>
+
+<!--  Device AUDINE1, Property CCD_STATUS  -->
+
+	<defLightVector device='AUDINE1' name='CCD_STATUS' state='Ok' label='Estado de la CCD'>
+		<defLight name='ALERT' label='Alarma'>
+			Idle
+		</defLight>
+		<defLight name='EXP' label='En exposicion'>
+			Idle
+		</defLight>
+		<defLight name='IDLE' label='Desconectada'>
+			Idle
+		</defLight>
+		<defLight name='OK' label='En reposo'>
+			Ok
+		</defLight>
+		<defLight name='READ' label='Leyendo'>
+			Idle
+		</defLight>
+		<defLight name='WAIT' label='En espera'>
+			Idle
+		</defLight>
+	</defLightVector>
+
+<!--  Device AUDINE1, Property CCD_TEMP  -->
+
+	<defNumberVector device='AUDINE1' name='CCD_TEMP' state='Ok' label='Temperatura CCD' perm='ro'>
+			<defNumber name='COLD' label='Cara fria peltier [C]' format='%+2.1f' min='0' max='0' step='0'>
+				726.969
+			</defNumber>
+			<defNumber name='HOT' label='Cara caliente peltier [C]' format='%+2.1f' min='0' max='0' step='0'>
+				726.969
+			</defNumber>
+			<defNumber name='VPELT' label='Voltaje peltier [V]' format='%+2.1f' min='0' max='0' step='0'>
+				9.99969
+			</defNumber>
+	</defNumberVector>
+
+<!--  Device AUDINE1, Property CHIP  -->
+
+	<defSwitchVector device='AUDINE1' name='CHIP' state='Ok' label='Seleccion de chip KAF' group='Geometria' perm='rw' rule='OneOfMany'>
+		<defSwitch name='KAF1600'>
+			Off
+		</defSwitch>
+		<defSwitch name='KAF3000'>
+			Off
+		</defSwitch>
+		<defSwitch name='KAF3200'>
+			Off
+		</defSwitch>
+		<defSwitch name='KAF400'>
+			On
+		</defSwitch>
+	</defSwitchVector>
+
+<!--  Device AUDINE1, Property EXPOSURE  -->
+
+	<defSwitchVector device='AUDINE1' name='EXPOSURE' state='Ok' label='Tomar imagenes' perm='rw' rule='OneOfMany'>
+		<defSwitch name='START' label='Comenzar secuencia'>
+			Off
+		</defSwitch>
+		<defSwitch name='STOP' label='Parar/Abortar'>
+			On
+		</defSwitch>
+	</defSwitchVector>
+
+<!--  Device AUDINE1, Property EXP_COUNTERS  -->
+
+	<defNumberVector device='AUDINE1' name='EXP_COUNTERS' state='Ok' label='Contadores'  perm='ro'>
+			<defNumber name='COUNT' label='Tomas restantes' format='%g' min='0' max='0' step='0'>
+				0
+			</defNumber>
+			<defNumber name='DELAY' label='Retardo restante [s]' format='%g' min='0' max='0' step='0'>
+				0
+			</defNumber>
+			<defNumber name='EXPTIME' label='Tiempo restante [s]' format='%g' min='0' max='0' step='0'>
+				0
+			</defNumber>
+			<defNumber name='PROGRESS' label='Datos recibidos [%]' format='%2.0f' min='0' max='0' step='0'>
+				0
+			</defNumber>
+	</defNumberVector>
+
+<!--  Device AUDINE1, Property EXP_LIMITS  -->
+
+	<defNumberVector device='AUDINE1' name='EXP_LIMITS' state='Ok' label='Secuenciador de exposicion' group='Control exposicion' perm='rw'>
+			<defNumber name='COUNT' label='Numero de tomas' format='%g' min='1' max='100' step='1'>
+				1
+			</defNumber>
+			<defNumber name='DELAY' label='Retardo entre tomas [s]' format='%g' min='0' max='1200' step='1'>
+				0
+			</defNumber>
+			<defNumber name='EXPTIME' label='Tiempo de exposicion [s]' format='%g' min='0' max='1200' step='1'>
+				0
+			</defNumber>
+	</defNumberVector>
+
+<!--  Device AUDINE1, Property FITS_TEXT_DATA  -->
+
+	<defTextVector device='AUDINE1' name='FITS_TEXT_DATA' state='Ok' label='Datos FITS adicionales' group='Datos FITS' perm='rw'>
+		<defText name='COMMENT' label='Comentario'>
+			
+		</defText>
+	</defTextVector>
+
+<!--  Device AUDINE1, Property IMAGETYP  -->
+
+	<defSwitchVector device='AUDINE1' name='IMAGETYP' state='Ok' label='Tipo de imagen' group='Control exposicion' perm='rw' rule='OneOfMany'>
+		<defSwitch name='BIAS' label='Toma bias'>
+			Off
+		</defSwitch>
+		<defSwitch name='DARK' label='Toma oscura'>
+			Off
+		</defSwitch>
+		<defSwitch name='FLAT' label='Campo plano'>
+			Off
+		</defSwitch>
+		<defSwitch name='FOCUS' label='Enfoque'>
+			On
+		</defSwitch>
+		<defSwitch name='OBJECT' label='Objeto'>
+			Off
+		</defSwitch>
+	</defSwitchVector>
+
+<!--  Device AUDINE1, Property CCD_CLEAN  -->
+
+	<defNumberVector device='AUDINE1' name='CCD_CLEAN' state='Ok' label='Limpiezas del CCD' group='Ajustes avanzados' perm='rw'>
+			<defNumber name='NUMBER' label='Veces' format='%g' min='1' max='20' step='1'>
+				8
+			</defNumber>
+	</defNumberVector>
+
+<!--  Device AUDINE1, Property PATTERN  -->
+
+	<defSwitchVector device='AUDINE1' name='PATTERN' state='Ok' label='Patron de barras' group='Control exposicion' perm='rw' rule='OneOfMany'>
+		<defSwitch name='OFF' label='Desactivado'>
+			On
+		</defSwitch>
+		<defSwitch name='ON' label='Activado'>
+			Off
+		</defSwitch>
+	</defSwitchVector>
+
+<!--  Device AUDINE1, Property PHOT_PARS  -->
+
+	<defNumberVector device='AUDINE1' name='PHOT_PARS' state='Ok' label='Datos FITS para fotometria' group='Datos FITS' perm='rw'>
+			<defNumber name='GAIN' label='Ganancia [e-/ADU]' format='%g' min='0' max='1000' step='1'>
+				0
+			</defNumber>
+			<defNumber name='RDNOISE' label='Ruido lectura 1x1 [e-]' format='%g' min='0' max='1000' step='1'>
+				0
+			</defNumber>
+	</defNumberVector>
+
+<!--  Device AUDINE1, Property CONFIGURATION  -->
+
+	<defSwitchVector device='AUDINE1' name='CONFIGURATION' state='Ok' label='Configuracion' perm='rw' rule='AtMostOne'>
+		<defSwitch name='SAVE' label='Guardar'>
+			Off
+		</defSwitch>
+	</defSwitchVector>
+
+<!--  Device AUDINE1, Property SHUTTER_DELAY  -->
+
+	<defNumberVector device='AUDINE1' name='SHUTTER_DELAY' state='Ok' label='Obturador, retardo' group='Ajustes avanzados' perm='rw'>
+			<defNumber name='DELAY' label='Retardo [ms]' format='%g' min='0' max='1000' step='1'>
+				800
+			</defNumber>
+	</defNumberVector>
+
+<!--  Device AUDINE1, Property SHUTTER_LOGIC  -->
+
+	<defSwitchVector device='AUDINE1' name='SHUTTER_LOGIC' state='Ok' label='Obturador, logica' group='Ajustes avanzados' perm='rw' rule='OneOfMany'>
+		<defSwitch name='NEGATIVE' label='Invertida'>
+			Off
+		</defSwitch>
+		<defSwitch name='POSITIVE' label='Normal'>
+			On
+		</defSwitch>
+	</defSwitchVector>
+
+<!--  Device AUDINE1, Property STORAGE  -->
+
+	<defTextVector device='AUDINE1' name='STORAGE' state='Ok' label='Almacenamiento local' group='Almacenamiento' perm='rw'>
+		<defText name='DIR' label='Directorio'>
+			/tmp
+		</defText>
+		<defText name='PREFIX' label='Prefijo de fichero'>
+			focus
+		</defText>
+	</defTextVector>
+
+<!--  Device AUDINE1, Property STORAGE_FLIP  -->
+
+	<defSwitchVector device='AUDINE1' name='STORAGE_FLIP' state='Ok' label='Volteado imagen' group='Control exposicion' perm='rw' rule='AnyOfMany'>
+		<defSwitch name='FLIP_LEFT_RIGHT' label='Voltear Izda/Dcha'>
+			Off
+		</defSwitch>
+		<defSwitch name='FLIP_UP_DOWN' label='Voltear arriba/abajo'>
+			Off
+		</defSwitch>
+	</defSwitchVector>
+
+<!--  Device AUDINE1, Property STORAGE_SERIES  -->
+
+	<defSwitchVector device='AUDINE1' name='STORAGE_SERIES' state='Ok' label='Id. de series de secuencias de imagenes' group='Ajustes avanzados' perm='rw' rule='OneOfMany'>
+		<defSwitch name='ALWAYS' label='Siempre'>
+			Off
+		</defSwitch>
+		<defSwitch name='NEVER' label='Nunca'>
+			Off
+		</defSwitch>
+		<defSwitch name='TWO_OR_MORE' label='A partir de dos'>
+			On
+		</defSwitch>
+
+	</defSwitchVector>
+
+<!--  Device AUDINE1, Property WCS_SEED  -->
+
+	<defNumberVector device='AUDINE1' name='WCS_SEED' state='Ok' label='Datos FITS para WCS' group='Datos FITS' perm='rw'>
+			<defNumber name='ROTA' label='Rotacion eje AR [D:M:S]' format='%10.6m' min='0' max='360' step='0'>
+				0
+			</defNumber>
+			<defNumber name='SCALE' label='Escala imagen 1x1 [arcsec/pixel]' format='%g' min='0' max='100' step='0'>
+				0
+			</defNumber>
+	</defNumberVector>
+
+<!--  Device AUDINE1, Property FOCUS_BUFFERS  -->
+
+	<defNumberVector device='AUDINE1' name='FOCUS_BUFFER' state='Ok' label='Buffers de enfoque' group='Ajustes avanzados' perm='rw'>
+			<defNumber name='SIZE' label='Numero de buffers' format='%g' min='2' max='10' step='1'>
+				2
+			</defNumber>
+	</defNumberVector>
+
+<!--  Device AUDINE1, Property EVENT_FIFO  -->
+
+	<defTextVector device='AUDINE1' name='EVENT_FIFO' state='Ok' label='FIFO de aviso de eventos a XEphem' group='Almacenamiento' perm='ro'>
+		<defText name='NAME' label='Nombre de la FIFO'>
+			watchfifo
+		</defText>
+		<defText name='DIR' label='Directorio'>
+			/home/astrorafael/.xephem
+		</defText>
+	</defTextVector>
+
+</defDevice>
+

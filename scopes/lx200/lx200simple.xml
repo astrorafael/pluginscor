@@ -1,0 +1,159 @@
+
+<!--  Device LX200  -->
+
+<defDevice name='LX200'>
+
+<!--  Device LX200, Property ABORT_MOTION  -->
+
+	<defSwitchVector device='LX200' name='ABORT_MOTION' state='Idle' label='Abortar Movimiento' group='Control movimiento' perm='rw' rule='AtMostOne'>
+		<defSwitch name='ABORT' label='Abortar'>
+			Off
+		</defSwitch>
+	</defSwitchVector>
+
+<!--  Device LX200, Property CORRD_FORMAT  -->
+
+	<defSwitchVector device='LX200' name='COORD_FORMAT' state='Idle' label='Formato de coordenadas' group='Posicion' perm='rw' rule='OneOfMany'>
+		<defSwitch name='LONG' label='Largo'>
+			Off
+		</defSwitch>
+		<defSwitch name='SHORT' label='Corto'>
+			On
+		</defSwitch>
+	</defSwitchVector>
+
+<!--  Device LX200, Property EDB  -->
+
+	<defTextVector device='LX200' name='EDB' state='Idle' label='Objeto observado' group='Posicion' perm='rw'>
+		<defText name='LINE' label='Datos .edb'>
+			M82,f|G|Sd, 9:55:54.0, 69:40:59,8.60,2000,672|258.259|64.9412
+		</defText>
+	</defTextVector>
+
+<!--  Device LX200, Property EQUATORIAL_COORD  -->
+
+	<defNumberVector device='LX200' name='EQUATORIAL_COORD' state='Idle' label='Coord. Ecuatoriales J2000' group='Posicion' perm='rw'>
+			<defNumber name='DEC' label='DEC [D:M:S]' format='%10.6m' min='-90' max='90' step='0'>
+				89.2833
+			</defNumber>
+			<defNumber name='RA' label='AR  [H:M:S]' format='%10.6m' min='0' max='24' step='0'>
+				9.42833
+			</defNumber>
+	</defNumberVector>
+
+<!--  Device LX200, Property MOUNT  -->
+
+       <defTextVector device='LX200' name='MOUNT' state='Idle' label='Datos Montura' group='Datos FITS adicionales' perm='ro'>
+		<defText name='DATE' label='Fecha Firmware'>
+
+		</defText>
+		<defText name='PROGRAM' label='Version firmware'>
+
+		</defText>
+		<defText name='MODEL' label='Modelo de montura'>
+
+		</defText>
+		<defText name='TIME' label='Hora Firmware'>
+
+		</defText>
+	</defTextVector>
+<!--  Device LX200, Property FITS_TEXT_DATA  -->
+
+	<defTextVector device='LX200' name='FITS_TEXT_DATA' state='Idle' label='Datos FITS' group='Datos FITS adicionales' perm='rw'>
+		<defText name='LOCATION' label='Emplazamiento'>
+			Bonilla, Cuenca
+		</defText>
+		<defText name='OBSERVER' label='Observador(es)'>
+			Rafael Gonzalez Fuentetaja
+		</defText>
+		<defText name='TELESCOP' label='Telescopio'>
+			LX200GPS 10 inch
+		</defText>
+	</defTextVector>
+
+<!--  Device LX200, Property MOVEMENT  -->
+
+	<defSwitchVector device='LX200' name='MOVEMENT' state='Idle' label='Movimiento' group='Control movimiento' perm='rw' rule='OneOfMany'>
+		<defSwitch name='EAST' label='Este'>
+			Off
+		</defSwitch>
+		<defSwitch name='NORTH' label='Norte'>
+			Off
+		</defSwitch>
+		<defSwitch name='WEST' label='Oeste'>
+			Off
+		</defSwitch>
+		<defSwitch name='SOUTH' label='Sur'>
+			On
+		</defSwitch>
+	</defSwitchVector>
+
+<!--  Device LX200, Property TARGET  -->
+
+	<defTextVector device='LX200' name='TARGET' state='Idle' label='Objeto observado' group='Posicion' perm='rw'>
+		<defText name='NAME' label='Denominacion'>
+			M82
+		</defText>
+	</defTextVector>
+
+<!--  Device LX200, Property ON_COORD_SET  -->
+
+	<defSwitchVector device='LX200' name='ON_COORD_SET' state='Idle' label='Accion' group='Posicion' perm='rw' rule='OneOfMany'>
+		<defSwitch name='SLEW' label='Ir a'>
+			On
+		</defSwitch>
+		<defSwitch name='SYNC' label='Sincronizar'>
+			Off
+		</defSwitch>
+	</defSwitchVector>
+
+<!--  Device LX200, Property OPTICS  -->
+
+	<defNumberVector device='LX200' name='OPTICS' state='Idle' label='Optica' group='Datos FITS adicionales' perm='rw'>
+			<defNumber name='DIAMETER' label='Diametro  [cm]' format='%g' min='0' max='200' step='1'>
+				25.4
+			</defNumber>
+			<defNumber name='FOCALLEN' label='Focal ef. [cm]' format='%g' min='0' max='10000' step='1'>
+				254
+			</defNumber>
+	</defNumberVector>
+
+<!--  Device LX200, Property RAW_COMMAND  -->
+
+	<defTextVector device='LX200' name='RAW_COMMAND' state='Idle' label='Comando a pelo' group='Miscelanea' perm='rw'>
+		<defText name='REQUEST' label='Cadena a enviar'>
+			:D
+		</defText>
+		<defText name='RESPONSE' label='Respuesta recibida'>
+			
+		</defText>
+	</defTextVector>
+
+<!--  Device LX200, Property CONFIGURATION  -->
+
+	<defSwitchVector device='LX200' name='CONFIGURATION' state='Idle' label='Configuracion' perm='rw' rule='AtMostOne'>
+		<defSwitch name='SAVE' label='Guardar'>
+			Off
+		</defSwitch>
+	</defSwitchVector>
+
+<!--  Device LX200, Property SLEW_RATE  -->
+
+	<defSwitchVector device='LX200' name='SLEW_RATE' state='Idle' label='Velocidad' group='Control movimiento' perm='rw' rule='OneOfMany'>
+		<defSwitch name='CENTERING' label='Centrado'>
+			Off
+		</defSwitch>
+		<defSwitch name='FIND' label='Busqueda'>
+			On
+		</defSwitch>
+		<defSwitch name='GUIDE' label='Guiado'>
+			Off
+		</defSwitch>
+		<defSwitch name='MAX' label='Maxima'>
+			Off
+		</defSwitch>
+	</defSwitchVector>
+
+
+</defDevice>
+

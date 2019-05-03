@@ -1,0 +1,116 @@
+
+<!--  Device COR  -->
+
+<defDevice name='COR'>
+
+<!--  Device COR, Property CCD_TEMP  -->
+
+	<defNumberVector device='COR' name='CCD_TEMP' state='Idle' label='Temperatura CCD' perm='ro'>
+			<defNumber name='COLD' label='Cara fria peltier [C]' format='%+2.1f' min='0' max='0' step='0'>
+				-1273
+			</defNumber>
+			<defNumber name='HOT' label='Cara caliente peltier [C]' format='%+2.1f' min='0' max='0' step='0'>
+				-1273
+			</defNumber>
+			<defNumber name='VPELT' label='Voltaje peltier [V]' format='%+2.1f' min='0' max='0' step='0'>
+				-10
+			</defNumber>
+	</defNumberVector>
+
+<!--  Device COR, Property HUB  -->
+
+	<defSwitchVector device='COR' name='HUB' state='Idle' label='Conectar al COR' perm='rw' rule='OneOfMany'>
+		<defSwitch name='CONNECT' label='Conectar'>
+			Off
+		</defSwitch>
+		<defSwitch name='DISCONNECT' label='Desconectar'>
+			On
+		</defSwitch>
+	</defSwitchVector>
+
+<!--  Device COR, Property DRIVER  -->
+
+	<defTextVector device='COR' name='DRIVER' state='Idle' label='Driver INDI' group='Acerca de' perm='ro'>
+		<defText name='AUTHOR' label='Autor'>
+			Rafael Gonzalez Fuentetaja
+		</defText>
+		<defText name='DATE' label='Fecha compilacion'>
+			Jun 18 2005
+		</defText>
+		<defText name='PROGRAM' label='Identificacion'>
+			pacorro
+		</defText>
+		<defText name='TIME' label='Hora  compilacion'>
+			10:30:03
+		</defText>
+	</defTextVector>
+
+<!--  Device COR, Property FIRMWARE  -->
+
+	<defTextVector device='COR' name='FIRMWARE' state='Idle' label='Firmware COR' group='Acerca de' perm='ro'>
+		<defText name='DATE' label='Fecha compilacion'>
+			Jun 17 2005
+		</defText>
+		<defText name='PROGRAM' label='Identificacion'>
+			corplus 
+		</defText>
+		<defText name='TIME' label='Hora  compilacion'>
+			23:17:46
+		</defText>
+                <defText name='SEQ_KCOL' label='Paso secuenciador Xilinx'>
+			5
+		</defText>
+                
+	</defTextVector>
+
+<!--  Device COR, Property POLLING  -->
+
+	<defNumberVector device='COR' name='POLLING' state='Idle' label='Sondeo COR' perm='rw'>
+			<defNumber name='PERIOD' label='Periodo [ms]' format='%4.0f' min='1000' max='10000' step='500'>
+				2000
+			</defNumber>
+	</defNumberVector>
+
+<!--  Device COR, Property IP_ADDRESS  -->
+
+	<defNumberVector device='COR' name='IP_ADDRESS' state='Idle' label='Direccion IP Remota' group='Configuracion Red' perm='rw'>
+			<defNumber name='IP1' label='N.x.x.x' format='%3.0f' min='1' max='254' step='1'>
+				192
+			</defNumber>
+			<defNumber name='IP2' label='x.N.x.x' format='%3.0f' min='0' max='255' step='1'>
+				168
+			</defNumber>
+			<defNumber name='IP3' label='x.x.N.x' format='%3.0f' min='0' max='255' step='1'>
+				0
+			</defNumber>
+			<defNumber name='IP4' label='x.x.x.N' format='%3.0f' min='1' max='254' step='1'>
+				98
+			</defNumber>
+	</defNumberVector>
+
+<!--  Device COR, Property HARDWARE  -->
+
+	<defSwitchVector device='COR' name='HARDWARE' state='Idle' label='Reset hardware COR' perm='rw' rule='AtMostOne'>
+		<defSwitch name='RESET' label='Reset'>
+			Off
+		</defSwitch>
+	</defSwitchVector>
+
+<!--  Device COR, Property CONFIGURATION  -->
+
+	<defSwitchVector device='COR' name='CONFIGURATION' state='Idle' label='Configuracion' perm='rw' rule='AtMostOne'>
+		<defSwitch name='SAVE' label='Guardar'>
+			Off
+		</defSwitch>
+	</defSwitchVector>
+
+<!--  Device COR, Property UDP_PORT  -->
+
+	<defNumberVector device='COR' name='UDP_PORT' state='Idle' label='Puerto UDP Local y Remoto' group='Configuracion Red' perm='ro'>
+			<defNumber name='PORT' label='Puerto' format='%3.0f' min='0' max='0' step='0'>
+				1236
+			</defNumber>
+	</defNumberVector>
+
+</defDevice>
+
